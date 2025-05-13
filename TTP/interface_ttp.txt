@@ -1,0 +1,25 @@
+<group name= "Bogons" method = "table">
+prefix {{prefix  | IP}}/{{mask}} prefix-length-range {{range}}
+prefix {{ prefix | IP }}/{{ mask }} {{match_type}}
+prefix {{prefix | IP }}/{{mask}} through {{through}}
+</group>
+
+
+<group name= "IPV6_Bogons" method= "table">
+prefix {{prefix | IPV6 }}/{{mask}} {{match_type}}
+prefix {{prefix | IPV6 }}/{{mask}} through {{through}}
+</group>
+
+<group name="prefix_list">
+ip-prefix-list "{{ name }}" create
+<group name="prefixes">
+prefix {{ prefix | IP }}/{{mask}}
+</group>
+</group>
+
+<group name="prefix_lists" >
+ipv6-prefix-list "{{ name }}" create
+<group name="prefixes">
+prefix {{ prefix }}/{{mask}}
+</group>
+</group>

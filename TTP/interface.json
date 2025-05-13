@@ -1,0 +1,101 @@
+[
+    {
+        "Bogons": [
+            {
+                "mask": "0",
+                "prefix": "0.0.0.0",
+                "range": "28-32"
+            },
+            {
+                "mask": "8",
+                "match_type": "longer",
+                "prefix": "0.0.0.0"
+            },
+            {
+                "mask": "8",
+                "match_type": "longer",
+                "prefix": "1.0.0.0"
+            },
+            {
+                "mask": "24",
+                "prefix": "204.116.46.0",
+                "through": "30"
+            },
+            {
+                "mask": "12",
+                "match_type": "longer",
+                "prefix": "172.16.0.0"
+            },
+            {
+                "mask": "16",
+                "match_type": "longer",
+                "prefix": "192.168.0.0"
+            },
+            {
+                "mask": "24",
+                "match_type": "exact",
+                "prefix": "204.116.121.0"
+            }
+        ],
+        "IPV6_Bogons": [
+            {
+                "mask": "48",
+                "match_type": "longer",
+                "prefix": "2402:8100:27df::"
+            },
+            {
+                "mask": "120",
+                "match_type": "longer",
+                "prefix": "2402:8100:4000:1:1:1:ff:500"
+            },
+            {
+                "mask": "120",
+                "match_type": "longer",
+                "prefix": "2402:8100:12:2::1:aa00"
+            },
+            {
+                "mask": "45",
+                "prefix": "2402:8100:24c0::",
+                "through": "48"
+            }
+        ],
+        "prefix_list": {
+            "name": "EBGP-SYSTEM-IP-POOL",
+            "prefixes": [
+                {
+                    "mask": "1",
+                    "prefix": "0.0.0.0"
+                },
+                {
+                    "mask": "30",
+                    "prefix": "10.5.209.16"
+                },
+                {
+                    "mask": "30",
+                    "prefix": "10.5.236.72"
+                }
+            ]
+        },
+        "prefix_lists": {
+            "name": "EBGP-SYSTEM-IP-POOL",
+            "prefixes": [
+                {
+                    "mask": "127",
+                    "prefix": "2402:3a80:2000:2c02::4"
+                },
+                {
+                    "mask": "127",
+                    "prefix": "2402:8100:4000:1:1:1:ff:ff0"
+                },
+                {
+                    "mask": "127",
+                    "prefix": "2402:8100:4000:1:1:1:ff:ff4"
+                },
+                {
+                    "mask": "127",
+                    "prefix": "2402:8100:4000:1:1:1:ff:ff6"
+                }
+            ]
+        }
+    }
+]

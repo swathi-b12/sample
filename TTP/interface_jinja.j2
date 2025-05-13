@@ -1,0 +1,52 @@
+prefix-set Bogons
+ {% for item in  Bogons %}
+ {% if item.match_type == "longer" %}
+  {{ item.prefix }}/{{ item.mask }} le 32
+ {% elif item.match_type == "orlonger" %}
+  {{ item.prefix }}/{{ item.mask }} ge {{ item.mask }} le 32
+ {% elif item.match_type == "exact" %}
+  {{ item.prefix }}/{{ item.mask }}
+ {% elif item.through is defined and item.through %}
+  {{ item.prefix }}/{{ item.mask }} le {{ item.through }}
+ {% elif item.range == "28-32" %}
+  {{ item.prefix }}/{{ item.mask }} ge {{ item.range.split('-')[0] }} le {{ item.range.split('-')[1] }}  
+{% endif %}
+{% endfor %}
+
+prefix-set IPV6_Bogons
+{% for item in IPV6_Bogons %}
+{% if item.mask == "120" %}
+{{item.prefix}}/{{item.mask}} le 128
+{%elif item.mask== "48" %}
+{{item.prefix}}/{{item.mask}} ge 49
+{% elif item.through is defined %}
+{{item.prefix}}/{{item.mask}} le 48
+{% endif %}
+{% endfor %}
+
+
+prefix-set {{ prefix_list.name }}
+{% for item in prefix_list.prefixes %}
+    {{ item.prefix }}
+{% endfor %}
+
+prefix-set {{ prefix_lists.name }}_IPv6
+{% for item in prefix_lists.prefixes %}
+    {{ item.prefix }}
+{% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
