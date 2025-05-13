@@ -1,0 +1,15 @@
+<group name= "interfaces">
+interface {{ interface }}
+ description {{ description | ORPHRASE }}
+ undo shutdown {{ shutdown_status | set('no shut') }}
+ ip binding vpn-instance {{ vpn_instance_name }}
+ ip address {{ ip_address | IP }} {{ subnet_mask | IP }}
+ trust upstream {{ trust_upstream }}
+ {{ dcn }} dcn
+ statistic {{statistics}}
+ vlan-type {{ vlan_type }} {{ vlan_id }}
+ mpls l2vc {{ mpls_ip | IP }} {{ vlan }}
+ vrrp vrid {{ vrid }} virtual-ip {{ virtual_ip | IP }}
+ vrrp vrid {{ vrid }} priority {{ priority }}
+ vrrp vrid {{ vrid }} authentication-mode simple cipher {{ cipher }}
+</group>

@@ -1,0 +1,2989 @@
+#
+interface GigabitEthernet0/0/0
+ speed auto
+ duplex auto
+ shutdown
+#
+interface GigabitEthernet1/0/0
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/0/1
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/0/2
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/0/3
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/0/4
+ description IN-053;devmcas1 ASP1-1
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.45 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet1/0/5
+ description IN-055;devmcas1 ASP2-1
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.49 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet1/0/6
+ description EME;IN-11
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.61 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet1/0/7
+ description 1G Trunk to devacsm1 Gi2/44 - xconnects
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet1/0/7.301
+ vlan-type dot1q 301
+ description MCC_Interconnect_LAN-sitexconnect_hmccpe1
+ statistic enable
+ trust upstream default
+ mpls l2vc 192.168.147.23 301
+#
+interface GigabitEthernet1/0/7.304
+ vlan-type dot1q 304
+ description Test_InternetMCC-sitexconnect_hmccpe1
+ statistic enable
+ trust upstream default
+ mpls l2vc 192.168.147.23 304
+#
+interface GigabitEthernet1/0/8
+ description devabmssw1 Fa0/23
+ undo shutdown
+ ip binding vpn-instance bms
+ ip address 192.168.30.150 255.255.255.240
+ trust upstream default
+ vrrp vrid 70 virtual-ip 192.168.30.145
+ vrrp vrid 70 priority 120
+ vrrp vrid 70 authentication-mode simple cipher %^%#@:V&#KHJwFb6&A:QgFOLS8ewU:d2HXdd_Q,aRvBH%^%#
+ statistic enable
+#
+interface GigabitEthernet1/0/9
+ description devap1 MgmtEth0/RP0
+ undo shutdown
+#
+interface GigabitEthernet1/0/9.1 mode l2
+ description devap1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/10
+ description devap1 MgmtEth0/RP1
+ undo shutdown
+#
+interface GigabitEthernet1/0/10.1 mode l2
+ description devap1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/11
+ description devap2 MgmtEth0/RP0
+ undo shutdown
+#
+interface GigabitEthernet1/0/11.1 mode l2
+ description devap2 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/12
+ description devap2 MgmtEth0/RP1
+ undo shutdown
+#
+interface GigabitEthernet1/0/12.1 mode l2
+ description devap2 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/13
+ description devape1 MgmtEth0/RP0
+ undo shutdown
+#
+interface GigabitEthernet1/0/13.1 mode l2
+ description devape1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/14
+ description devape1 MgmtEth0/RP1
+ undo shutdown
+#
+interface GigabitEthernet1/0/14.1 mode l2
+ description devape1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/15
+ description devape2 MgmtEth0/RP0
+ undo shutdown
+#
+interface GigabitEthernet1/0/15.1 mode l2
+ description devape2 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/16
+ description devape2 MgmtEth0/RP1
+ undo shutdown
+#
+interface GigabitEthernet1/0/16.1 mode l2
+ description devape2 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/17
+ description devaasbr1 MgmtEth0/RP0
+ undo shutdown
+#
+interface GigabitEthernet1/0/17.1 mode l2
+ description devaasbr1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/18
+ description devaasbr1 MgmtEth0/RP1
+ undo shutdown
+#
+interface GigabitEthernet1/0/18.1 mode l2
+ description devaasbr1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/19
+ description devavpnvrr1 MGMT
+ undo shutdown
+#
+interface GigabitEthernet1/0/19.1 mode l2
+ description devavpnvrr1 OoB MGMT
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/20
+ description devavpnvrr1 CIMC
+ undo shutdown
+#
+interface GigabitEthernet1/0/20.1 mode l2
+ description devavpnvrr1 CIMC
+ encapsulation untag
+ bridge-domain 19
+#
+interface GigabitEthernet1/0/21
+ shutdown
+#
+interface GigabitEthernet1/0/22
+ shutdown
+#
+interface GigabitEthernet1/0/23
+ shutdown
+#
+interface GigabitEthernet1/1/0
+ description HMSS4B-0-1-0-IFM  TESTIN22
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.5 255.255.255.252
+ trust upstream default
+ undo dcn
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 8
+ statistic enable
+#
+interface GigabitEthernet1/1/1
+ description HMGW4B-1-0-7-MNET TESTIN5
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.9 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet1/1/2
+ description LI_MSS_SL10_CARD3_LAN0
+ shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.129 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet1/1/3
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/1/4
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/1/5
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/1/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/1/7
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet1/1/8
+ description IN-111;devmcas2-sigtran1
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.97 255.255.255.252
+#
+interface GigabitEthernet1/1/9
+ description devats2 Gi0/0
+ undo shutdown
+ ip address 192.168.152.233 255.255.255.252
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#p1xiN;8e;&oj7384*bDIYFo&tqc"8&Nxr0=vK@K%^%#
+ ospf cost 1000
+ ospf network-type p2p
+ statistic enable
+#
+interface GigabitEthernet1/1/10
+ shutdown
+#
+interface GigabitEthernet1/1/11
+ shutdown
+#
+interface GigabitEthernet1/1/12
+ shutdown
+#
+interface GigabitEthernet1/1/13
+ description MASS-27;devsmsfw1 - VAS
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.65 255.255.255.252
+ trust upstream default
+ statistic enable
+#
+interface GigabitEthernet1/1/14
+ description MASS-31;devsmsfw2 - VAS
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.69 255.255.255.252
+ trust upstream default
+ statistic enable
+#
+interface GigabitEthernet1/1/15
+ description devats1 Gi0/0
+ undo shutdown
+ ip address 192.168.149.185 255.255.255.252
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#;s_-DEP48Q~IG-VI=!r3UN"pT=*d<.D*IWW"USJ%^%#
+ ospf cost 1000
+ ospf network-type p2p
+ statistic enable
+#
+interface GigabitEthernet1/1/16
+ shutdown
+#
+interface GigabitEthernet1/1/17
+ shutdown
+#
+interface GigabitEthernet1/1/18
+ description FA-290;devan7k1 mgmt0
+ undo shutdown
+ ip binding vpn-instance n7ktest
+ ip address 172.21.254.1 255.255.255.252
+ trust upstream default
+ statistic enable
+#
+interface GigabitEthernet1/1/19
+ shutdown
+#
+interface GigabitEthernet1/1/20
+ shutdown
+#
+interface GigabitEthernet1/1/21
+ shutdown
+#
+interface GigabitEthernet1/1/22
+ shutdown
+#
+interface GigabitEthernet1/1/23
+ shutdown
+#
+interface GigabitEthernet2/0/0
+ description HMGW4B-0-1-10-MHRD
+ undo shutdown
+ ip binding vpn-instance csvoice
+ ip address 10.132.15.1 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet2/0/1
+ description HMGW4B-1-3-10-MHRD
+ undo shutdown
+ ip binding vpn-instance csvoice
+ ip address 10.132.15.17 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet2/0/2
+ description HMGW4B-1-4-14-MHRD
+ undo shutdown
+ ip binding vpn-instance csvoice
+ ip address 10.132.15.225 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet2/0/3
+ description DevaiASBC FRM0 0/1/4
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet2/0/3.158
+ vlan-type dot1q 158
+ description DevaiASBC FRM0 core signaling
+ ip binding vpn-instance cssig
+ ip address 10.132.41.193 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet2/0/4
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/0/5
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/0/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/0/7
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/0/8
+ shutdown
+#
+interface GigabitEthernet2/0/9
+ description 1G Trunk to devabmssw2
+ undo shutdown
+#
+interface GigabitEthernet2/0/9.30
+ vlan-type dot1q 30
+ description MSC4D IP Management Interfaces M1 Zone
+ ip binding vpn-instance ipmgmtint
+ ip address 192.168.180.194 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 4 virtual-ip 192.168.180.193
+ vrrp vrid 4 priority 120
+#
+interface GigabitEthernet2/0/9.502
+ vlan-type dot1q 502
+ description MSC4D kartyaolvasok - Security
+ ip binding vpn-instance sec-term
+ ip address 192.168.15.252 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 174 virtual-ip 192.168.15.254
+ vrrp vrid 174 authentication-mode simple cipher %^%#*Fw$H8X^4&4va$:pW{LM2iW+3zB{=L6gY)s.i~(%^%#
+#
+interface GigabitEthernet2/0/9.550
+ vlan-type dot1q 550
+ description MSC4D DC SecCAM
+ ip binding vpn-instance office
+ ip address 192.168.47.252 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 175 virtual-ip 192.168.47.254
+ vrrp vrid 175 priority 120
+ vrrp vrid 175 authentication-mode simple cipher %^%#ISHI2XFt&<-l]I/:bBH$H,d;N1ZbXT)'5\8z]99H%^%#
+#
+interface GigabitEthernet2/0/10
+ description to devats3 Gi0/0/0
+ undo shutdown
+ ip address 192.168.149.189 255.255.255.252
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#r~m4F,v#p#M8j&'skK<9_t02z&s3Boy$Q5NsZ"G%^%#
+ ospf cost 1000
+ ospf network-type p2p
+ statistic enable
+#
+interface GigabitEthernet2/0/11
+ description to devats4 Gi0/0/0
+ undo shutdown
+ ip address 192.168.149.197 255.255.255.252
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#0o`"uFQ{F[dS_.^mEtXO)[L@0"_X3^iP\7N;2bA%^%#
+ ospf cost 1000
+ ospf network-type p2p
+ statistic enable
+#
+interface GigabitEthernet2/0/12
+ description to devats5 Gi0/0/0
+ undo shutdown
+ ip address 192.168.149.209 255.255.255.252
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#p1xiN;8e;&oj7384*bDIYFo&tqc"8&Nxr0=vK@K%^%#
+ ospf cost 1000
+ ospf network-type p2p
+ statistic enable
+#
+interface GigabitEthernet2/0/13
+ shutdown
+#
+interface GigabitEthernet2/0/14
+ shutdown
+#
+interface GigabitEthernet2/0/15
+ shutdown
+#
+interface GigabitEthernet2/0/16
+ shutdown
+#
+interface GigabitEthernet2/0/17
+ shutdown
+#
+interface GigabitEthernet2/0/18
+ shutdown
+#
+interface GigabitEthernet2/0/19
+ shutdown
+#
+interface GigabitEthernet2/0/20
+ shutdown
+#
+interface GigabitEthernet2/0/21
+ shutdown
+#
+interface GigabitEthernet2/0/22
+ shutdown
+#
+interface GigabitEthernet2/0/23
+ shutdown
+#
+interface GigabitEthernet2/1/0
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/1/1
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/1/2
+ description LI_MSS_SL10_CARD4_LAN0
+ shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.137 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet2/1/3
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/1/4
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/1/5
+ description masssms sigtran - VAS
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.35.65 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet2/1/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet2/1/7
+ description IN-113;devmcas2-sigtran3
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.101 255.255.255.252
+ undo dcn
+#
+interface GigabitEthernet2/1/8
+ shutdown
+#
+interface GigabitEthernet2/1/9
+ shutdown
+#
+interface GigabitEthernet2/1/10
+ shutdown
+#
+interface GigabitEthernet2/1/11
+ shutdown
+#
+interface GigabitEthernet2/1/12
+ shutdown
+#
+interface GigabitEthernet2/1/13
+ shutdown
+#
+interface GigabitEthernet2/1/14
+ shutdown
+#
+interface GigabitEthernet2/1/15
+ shutdown
+#
+interface GigabitEthernet2/1/16
+ shutdown
+#
+interface GigabitEthernet2/1/17
+ description HMSS4B-0-2-0-IFM TESTIN24
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.29 255.255.255.252
+ trust upstream default
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 8
+ statistic enable
+#
+interface GigabitEthernet2/1/18
+ shutdown
+#
+interface GigabitEthernet2/1/19
+ shutdown
+#
+interface GigabitEthernet2/1/20
+ description IN-059;testmcas4-sigtran1;
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.105 255.255.255.252
+#
+interface GigabitEthernet2/1/21
+ shutdown
+#
+interface GigabitEthernet2/1/22
+ shutdown
+#
+interface GigabitEthernet2/1/23
+ shutdown
+#
+interface GigabitEthernet3/0/0
+ description HMGW4B-1-2-10-MHRD
+ undo shutdown
+ ip binding vpn-instance csvoice
+ ip address 10.132.15.9 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet3/0/1
+ description HMGW4B-1-4-10-MHRD
+ undo shutdown
+ ip binding vpn-instance csvoice
+ ip address 10.132.15.25 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet3/0/2
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/0/3
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/0/4
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/0/5
+ mtu 1514
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/0/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/0/7
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/0/8
+ shutdown
+#
+interface GigabitEthernet3/0/9
+ shutdown
+#
+interface GigabitEthernet3/0/10
+ shutdown
+#
+interface GigabitEthernet3/0/11
+ shutdown
+#
+interface GigabitEthernet3/0/12
+ shutdown
+#
+interface GigabitEthernet3/0/13
+ shutdown
+#
+interface GigabitEthernet3/0/14
+ shutdown
+#
+interface GigabitEthernet3/0/15
+ shutdown
+#
+interface GigabitEthernet3/0/16
+ shutdown
+#
+interface GigabitEthernet3/0/17
+ shutdown
+#
+interface GigabitEthernet3/0/18
+ shutdown
+#
+interface GigabitEthernet3/0/19
+ shutdown
+#
+interface GigabitEthernet3/0/20
+ shutdown
+#
+interface GigabitEthernet3/0/21
+ shutdown
+#
+interface GigabitEthernet3/0/22
+ shutdown
+#
+interface GigabitEthernet3/0/23
+ shutdown
+#
+interface GigabitEthernet3/1/0
+ description TRM - to_09004B13-ge0/2/3 - M2k_U2k VRF
+ undo shutdown
+ ip binding vpn-instance enodeb
+ ip address 172.19.3.129 255.255.255.252
+ undo dcn
+#
+interface GigabitEthernet3/1/1
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/1/2
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet3/1/3
+ description IN-061;testmcas4-sigtran3;
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.109 255.255.255.252
+ undo dcn
+#
+interface GigabitEthernet3/1/4
+ description ROAMWARE-TEST01-SIG1;C1-01;
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.53 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet3/1/5
+ description ROAMWARE-TEST02-SIG1;C1-03;
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.57 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet3/1/6
+ description ROAMWARE-PROD01-SIG1;C1-05;
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.73 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet3/1/7
+ description ROAMWARE-PROD02-SIG1;C1-07;
+ undo shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.77 255.255.255.252
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet3/1/8
+ shutdown
+#
+interface GigabitEthernet3/1/9
+ shutdown
+#
+interface GigabitEthernet3/1/10
+ shutdown
+#
+interface GigabitEthernet3/1/11
+ shutdown
+#
+interface GigabitEthernet3/1/12
+ shutdown
+#
+interface GigabitEthernet3/1/13
+ description devacamsw1 0/23
+ undo shutdown
+ ip binding vpn-instance office
+ ip address 192.168.47.124 255.255.255.224
+ trust upstream default
+ vrrp vrid 48 virtual-ip 192.168.47.126
+ vrrp vrid 48 priority 120
+ vrrp vrid 48 authentication-mode simple cipher %^%#8%l1*~uVU^U^)2tt0PQ[_P=&CT#PAphnSY\^n$%^%#
+ ip netstream inbound
+ ipv6 netstream inbound
+ statistic enable
+#
+interface GigabitEthernet3/1/14
+ shutdown
+#
+interface GigabitEthernet3/1/15
+ shutdown
+#
+interface GigabitEthernet3/1/16
+ shutdown
+#
+interface GigabitEthernet3/1/17
+ shutdown
+#
+interface GigabitEthernet3/1/18
+ shutdown
+#
+interface GigabitEthernet3/1/19
+ shutdown
+#
+interface GigabitEthernet3/1/20
+ shutdown
+#
+interface GigabitEthernet3/1/21
+ shutdown
+#
+interface GigabitEthernet3/1/22
+ mtu 1800
+ description MONITOR
+ undo shutdown
+ trust upstream default
+ port-observing observe-index 3
+ statistic enable
+#
+interface GigabitEthernet3/1/23
+ description LI_MGW_SL7_P1
+ shutdown
+ ip binding vpn-instance cssig
+ ip address 10.131.36.133 255.255.255.252
+ trust upstream default
+ statistic enable
+#
+interface GigabitEthernet7/0/0
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/0/1
+ description DEVA-PROD-S-201 Eth1/45
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet7/0/1.4
+ vlan-type dot1q 4
+ mtu 9216
+ description ACI ISN PtP to DEVASPINE201
+ ip binding vpn-instance aci-isn
+ ip address 192.168.44.18 255.255.255.252
+ statistic enable
+ trust upstream default
+ ospf network-type p2p
+#
+interface GigabitEthernet7/0/2
+ description Eth92 #1 10GE to devasp3n9k1 Eth2/26/4
+ undo shutdown
+ eth-trunk 92
+ undo dcn
+#
+interface GigabitEthernet7/0/3
+ description DevaiASBC FRM0 0/1/0
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet7/0/3.150
+ vlan-type dot1q 150
+ description DevaiASBC FRM0 access
+ ip binding vpn-instance vobbaccess
+ ip address 10.40.9.193 255.255.255.252
+ statistic enable
+ trust upstream default
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 7
+#
+interface GigabitEthernet7/0/3.180
+ vlan-type dot1q 180
+ description DevaiASBC FRM0 access v6
+ ip binding vpn-instance vobbaccess
+ ipv6 enable
+ ipv6 address 2A01:8F8:404:8::1/64
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet7/0/4
+ description Eth9 #1 10GE to devancn9k1 Eth1/3
+ undo shutdown
+ eth-trunk 9
+ undo dcn
+#
+interface GigabitEthernet7/0/5
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/0/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/0/7
+ description DEVAI-TELEKOM-VOIP-IC-GB075019
+ undo shutdown
+ undo lldp enable
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet7/0/7.200
+ vlan-type dot1q 200
+ description DEVAI-TELEKOM-VOIP-IC-SIGN
+ ip binding vpn-instance extsig-telekom
+ ip address 10.255.185.139 255.255.255.254
+ statistic enable
+#
+interface GigabitEthernet7/0/7.300
+ vlan-type dot1q 300
+ description DEVAI-TELEKOM-VOIP-IC-MEDIA
+ ip binding vpn-instance extmedia-telekom
+ ip address 10.255.185.143 255.255.255.254
+ statistic enable
+#
+interface GigabitEthernet7/0/7.400
+ vlan-type dot1q 400
+ description DEVAI-TELEKOM-MAP-SIGNALING
+ ip binding vpn-instance extmap-telekom
+ ip address 10.255.185.147 255.255.255.254
+ statistic enable
+#
+interface GigabitEthernet7/0/8
+ shutdown
+#
+interface GigabitEthernet7/0/9
+ shutdown
+#
+interface GigabitEthernet7/0/10
+ mtu 9212
+ description devabng1 1/1/1
+ undo shutdown
+ ip address 192.168.152.117 255.255.255.252
+ trust upstream default
+ mpls
+ statistic enable
+#
+interface GigabitEthernet7/0/11
+ description 10G Trunk to devan7k1-DCN Eth3/25
+ undo shutdown
+ trust upstream default
+ statistic enable
+#
+interface GigabitEthernet7/0/11.20
+ vlan-type dot1q 20
+ description MSC4A OfficeNet Data
+ ip binding vpn-instance office
+ ip address 172.20.65.66 255.255.255.224
+ vrrp vrid 107 virtual-ip 172.20.65.65
+ vrrp vrid 107 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+ dhcp select relay
+ ip relay address 172.17.16.147
+ ip relay address 172.21.16.190
+#
+interface GigabitEthernet7/0/11.50
+ vlan-type dot1q 50
+ description MSC4A OfficeNet NMC/AOC
+ ip binding vpn-instance office
+ ip address 172.20.64.2 255.255.255.240
+ vrrp vrid 108 virtual-ip 172.20.64.1
+ vrrp vrid 108 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+ dhcp select relay
+ ip relay address 172.17.16.147
+ ip relay address 172.21.16.190
+#
+interface GigabitEthernet7/0/11.300
+ vlan-type dot1q 300
+ description MSC4A CIPT
+ ip binding vpn-instance office
+ ip address 172.21.143.2 255.255.255.0
+ vrrp vrid 109 virtual-ip 172.21.143.1
+ vrrp vrid 109 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+ dhcp select relay
+ ip relay address 172.20.66.73
+ ip relay address 172.20.122.73
+#
+interface GigabitEthernet7/0/11.370
+ vlan-type dot1q 370
+ description OSS Backup Redundancy
+ ip binding vpn-instance oss_backup
+ ip address 192.168.115.60 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 40 virtual-ip 192.168.115.62
+ vrrp vrid 40 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.406
+ vlan-type dot1q 406
+ description Service Navigator CPE Demo
+ ip binding vpn-instance cpeman
+ ip address 10.64.32.2 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 115 virtual-ip 10.64.32.1
+ vrrp vrid 115 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.426
+ vlan-type dot1q 426
+ description Huawei_LIG
+ ip binding vpn-instance lig
+ ip address 172.19.15.146 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 43 virtual-ip 172.19.15.145
+ vrrp vrid 43 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.434
+ vlan-type dot1q 434
+ description cpe_man to devadcnsw1
+ ip binding vpn-instance cpeman
+ ip address 192.168.109.226 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 44 virtual-ip 192.168.109.225
+ vrrp vrid 44 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.451
+ vlan-type dot1q 451
+ description ROAMWARE-TEST DIAMETER
+ ip binding vpn-instance gy
+ ip address 172.19.30.194 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 49 virtual-ip 172.19.30.193
+ vrrp vrid 49 priority 120
+ vrrp vrid 49 authentication-mode simple cipher %^%#Fw+vVfvQ,8r=zPV:z:-0KvTNH:BLeL_9DFX~SUK(%^%#
+#
+interface GigabitEthernet7/0/11.452
+ vlan-type dot1q 452
+ description ROAMWARE-TEST SERVICE LAN
+ ip binding vpn-instance roamware-service
+ ip address 172.19.30.162 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 50 virtual-ip 172.19.30.161
+ vrrp vrid 50 priority 120
+ vrrp vrid 50 authentication-mode simple cipher %^%#:vIv1)FOk=bd}@U-lCm.K@1XQoFpTCqZfTfm~!I%^%#
+#
+interface GigabitEthernet7/0/11.453
+ vlan-type dot1q 453
+ description ROAMWARE-PROD DIAMETER
+ ip binding vpn-instance gy
+ ip address 172.19.30.66 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 51 virtual-ip 172.19.30.65
+ vrrp vrid 51 priority 120
+ vrrp vrid 51 authentication-mode simple cipher %^%#)wk+@d(e/9m.Y`R.Gu~2vG=W4#WS;;qxl[*@6J@$%^%#
+#
+interface GigabitEthernet7/0/11.454
+ vlan-type dot1q 454
+ description ROAMWARE-PROD SERVICE LAN
+ ip binding vpn-instance roamware-service
+ ip address 172.19.30.34 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 52 virtual-ip 172.19.30.33
+ vrrp vrid 52 priority 120
+ vrrp vrid 52 authentication-mode simple cipher %^%#WS.A"v_HY!lQ8|H-=vcQi|OJPjq6W5sZA"F`b*:I%^%#
+#
+interface GigabitEthernet7/0/11.456
+ vlan-type dot1q 456
+ description PCRF PROD APP
+ ip binding vpn-instance pcrf
+ ip address 172.19.16.66 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 97 virtual-ip 172.19.16.65
+ vrrp vrid 97 priority 120
+ vrrp vrid 97 authentication-mode simple cipher %^%#vEgvQXs}v0~k`-Kv0ZH8Lb#ZEuUD\rN7|Yt;~^M%^%#
+#
+interface GigabitEthernet7/0/11.457
+ vlan-type dot1q 457
+ description PCRF PROD SIG1
+ ip binding vpn-instance pcrf
+ ip address 172.19.16.83 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 129 virtual-ip 172.19.16.81
+ vrrp vrid 129 priority 120
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 8
+#
+interface GigabitEthernet7/0/11.458
+ vlan-type dot1q 458
+ description PCRF SIG2
+ set flow-stat interval 30
+ ip binding vpn-instance pcrf
+ ip address 172.19.16.91 255.255.255.248
+ statistic enable
+ vrrp vrid 130 virtual-ip 172.19.16.89
+ vrrp vrid 130 priority 120
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 8
+#
+interface GigabitEthernet7/0/11.460
+ vlan-type dot1q 460
+ description office to devadcnsw1
+ ip binding vpn-instance office
+ ip address 172.21.8.252 255.255.255.0
+ statistic enable
+ trust upstream default
+ vrrp vrid 45 virtual-ip 172.21.8.254
+ vrrp vrid 45 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.472
+ vlan-type dot1q 472
+ description PCRF TEST APP
+ ip binding vpn-instance pcrf
+ ip address 172.19.16.194 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 98 virtual-ip 172.19.16.193
+ vrrp vrid 98 priority 120
+ vrrp vrid 98 authentication-mode simple cipher %^%#<Q`fVw^:'How4B,L9:5;xre|:[{1uV\aV#<K=LE-%^%#
+#
+interface GigabitEthernet7/0/11.473
+ vlan-type dot1q 473
+ description PCRF TEST SIG1
+ ip binding vpn-instance pcrf
+ ip address 172.19.16.211 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 127 virtual-ip 172.19.16.209
+ vrrp vrid 127 priority 120
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 8
+#
+interface GigabitEthernet7/0/11.474
+ vlan-type dot1q 474
+ description PCRF TEST SIG2
+ ip binding vpn-instance pcrf
+ ip address 172.19.16.220 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 128 virtual-ip 172.19.16.217
+ vrrp vrid 128 priority 120
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 8
+#
+interface GigabitEthernet7/0/11.498
+ vlan-type dot1q 498
+ description PtP Link to devan7k1-DCN Vlan498
+ ip binding vpn-instance dcn
+ ip address 172.19.0.0 255.255.255.254
+ statistic enable
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#-w8-'%v=D,q]gKQv<Cx0ey2`LT@QV-BS}Tt!V!"%^%#
+ ospf network-type p2p
+ ospf timer hello 1
+ ospf timer dead 3
+#
+interface GigabitEthernet7/0/11.502
+ vlan-type dot1q 502
+ description kartyaolvasok - Security
+ ip binding vpn-instance sec-term
+ ip address 192.168.15.220 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 46 virtual-ip 192.168.15.222
+ vrrp vrid 46 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.600
+ vlan-type dot1q 600
+ description MSC4A Wifi
+ ip binding vpn-instance office
+ ip address 172.21.211.77 255.255.255.240
+ vrrp vrid 110 virtual-ip 172.21.211.65
+ vrrp vrid 110 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+ dhcp select relay
+ ip relay address 172.20.66.73
+ ip relay address 172.20.122.73
+#
+interface GigabitEthernet7/0/11.643
+ vlan-type dot1q 643
+ description IP Management Interfaces M1 Zone
+ ip binding vpn-instance ipmgmtint
+ ip address 192.168.180.242 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 236 virtual-ip 192.168.180.241
+ vrrp vrid 236 track admin-vrrp interface GigabitEthernet7/0/11.3060 vrid 246 unflowdown
+#
+interface GigabitEthernet7/0/11.651
+ vlan-type dot1q 651
+ description MSC4 BMS Management
+ ip binding vpn-instance bms
+ ip address 192.168.30.92 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 53 virtual-ip 192.168.30.94
+ vrrp vrid 53 priority 120
+ vrrp vrid 53 authentication-mode simple cipher %^%#;pxHAmj,](8zR}@IP="Ee*'*J!a(yEmcS^2L:-[=%^%#
+#
+interface GigabitEthernet7/0/11.1098
+ vlan-type dot1q 1098
+ description devfdtvm1 SIG1
+ ip binding vpn-instance cssig
+ ip address 10.131.36.121 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet7/0/11.3060
+ vlan-type dot1q 3060
+ description MASTER MVRRP GROUP
+ ip binding vpn-instance vrrp
+ ip address 192.168.41.17 255.255.255.248
+ vrrp vrid 246 virtual-ip 192.168.41.19
+ admin-vrrp vrid 246 ignore-if-down
+ vrrp vrid 246 priority 120
+ vrrp vrid 246 authentication-mode simple cipher %^%#wBo'a*T06RUZsIOy"[MJKcU-/qzY&jl)AACyq[P%^%#
+#
+interface GigabitEthernet7/0/11.3061
+ vlan-type dot1q 3061
+ description BACKUP MVRRP GROUP
+ ip binding vpn-instance vrrp
+ ip address 192.168.41.25 255.255.255.248
+ vrrp vrid 247 virtual-ip 192.168.41.27
+ admin-vrrp vrid 247 ignore-if-down
+ vrrp vrid 247 priority 80
+ vrrp vrid 247 authentication-mode simple cipher %^%#:2"LUb""38;L*~V^tK"72O=UemmXC2KcC,\Z[sU%^%#
+ vrrp vrid 247 track bfd-session session-name mVRRP-8 increased 60
+#
+interface GigabitEthernet7/1/0
+ description 10G Trunk to devan7k1-IT Eth3/1
+ undo shutdown
+ trust upstream default
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet7/1/0.98
+ vlan-type dot1q 98
+ description PtP Link to devan7k1-IT Vlan98
+ ip binding vpn-instance itdc
+ ip address 172.21.255.0 255.255.255.254
+ statistic enable
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#uz0fVn0ViE!vL"I5R~LKks/bYYA2P86H4A$EUrHT%^%#
+ ospf cost 10
+ ospf network-type p2p
+#
+interface GigabitEthernet7/1/0.256
+ vlan-type dot1q 256
+ description --- HP Bartokhaz ---
+ ip binding vpn-instance hp_bartok
+ ip address 172.21.255.58 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 62 virtual-ip 172.21.255.57
+ vrrp vrid 62 priority 120
+ vrrp vrid 62 authentication-mode simple cipher %^%#-3q^X0g"JG1;$*$!:lj6gC#),XNLFH<`'^NatW9N%^%#
+ ip netstream inbound
+ ipv6 netstream inbound
+#
+interface GigabitEthernet7/1/0.642
+ vlan-type dot1q 642
+ description IP Management Interfaces M1 Zone
+ ip binding vpn-instance ipmgmtint
+ ip address 192.168.180.2 255.255.255.128
+ statistic enable
+ trust upstream default
+ vrrp vrid 198 virtual-ip 192.168.180.1
+ vrrp vrid 198 priority 120
+#
+interface GigabitEthernet7/1/0.650
+ vlan-type dot1q 650
+ description BMS
+ ip binding vpn-instance bms
+ ip address 192.168.30.76 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 64 virtual-ip 192.168.30.78
+ vrrp vrid 64 priority 120
+ vrrp vrid 64 authentication-mode simple cipher %^%#wy!M+t:R86&[Z"!O9[-05:hU-_Kbd(MN5z)J1Ti4%^%#
+#
+interface GigabitEthernet7/1/0.803
+ vlan-type dot1q 803
+ description NSX-T POC Transport Edge
+ ip binding vpn-instance nsxt-poc-edge
+ ip address 172.21.61.129 255.255.255.128
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet7/1/0.804
+ vlan-type dot1q 804
+ description NSX-T POC TR Edge to DEVADCASA ICONN
+ ip binding vpn-instance nsxt-poc-edge
+ ip address 172.21.60.138 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 221 virtual-ip 172.21.60.137
+ vrrp vrid 221 priority 120
+ vrrp vrid 221 authentication-mode simple cipher %^%#t^qA5aP]S(C.EkKC3R^B.Vv9Mj/3H2_M{Q-v4P5'%^%#
+#
+interface GigabitEthernet7/1/0.1252
+ vlan-type dot1q 1252
+ description Devai IP Management Interface HUB to DEVACP
+ ip binding vpn-instance ipmgmtint-devahub
+ ip address 192.168.54.34 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 197 virtual-ip 192.168.54.33
+ vrrp vrid 197 priority 120
+#
+interface GigabitEthernet7/1/0.1259
+ vlan-type dot1q 1259
+ description cDNS Data
+ ip binding vpn-instance cdnsdata
+ ip address 192.168.182.156 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 22 virtual-ip 192.168.182.158
+ vrrp vrid 22 priority 120
+#
+interface GigabitEthernet7/1/0.1260
+ vlan-type dot1q 1260
+ description UPC-ISP-TEST
+ ip binding vpn-instance upc-isptestnet
+ ipv6 enable
+ ip address 213.222.146.241 255.255.255.240
+ ipv6 address 2A02:AB8F:FFFF:FFFF::1/64
+#
+interface GigabitEthernet7/1/0.1519
+ vlan-type dot1q 1519
+ description UPCCMTSMAN interconnect
+ ip binding vpn-instance upccmtsman
+ ip address 192.168.54.92 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 201 virtual-ip 192.168.54.94
+ vrrp vrid 201 priority 120
+#
+interface GigabitEthernet7/1/0.1598
+ vlan-type dot1q 1598
+ description GPON CPE PROD MGMT to DEVASBIFP
+ ip binding vpn-instance gpon-cpe-prod-mgmt
+ ip address 192.168.54.204 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 206 virtual-ip 192.168.54.206
+ vrrp vrid 206 priority 120
+#
+interface GigabitEthernet7/1/0.1599
+ vlan-type dot1q 1599
+ description GPON CPE MGMT TEST to DEVASBIFP
+ ip binding vpn-instance gpon-cpe-test-mgmt
+ ip address 192.168.54.60 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 199 virtual-ip 192.168.54.62
+ vrrp vrid 199 priority 120
+#
+interface GigabitEthernet7/1/0.2467
+ vlan-type dot1q 2467
+ description DEVASBIFP UPC CMTS MAN ICONN
+ ip binding vpn-instance upccmtsman
+ ipv6 enable
+ ip address 192.168.54.84 255.255.255.248
+ ipv6 address 2A01:8F8:704:1::C/125
+ statistic enable
+ trust upstream default
+ vrrp vrid 230 virtual-ip 192.168.54.86
+ vrrp vrid 230 priority 120
+ vrrp6 vrid 230 virtual-ip FE80::1 link-local
+ vrrp6 vrid 230 virtual-ip 2A01:8F8:704:1::E
+ vrrp6 vrid 230 priority 120
+#
+interface GigabitEthernet7/1/0.2795
+ vlan-type dot1q 2795
+ description vtap-HC2-management
+ ip binding vpn-instance nvimgmt
+ ip address 10.148.44.210 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 219 virtual-ip 10.148.44.209
+ vrrp vrid 219 priority 120
+#
+interface GigabitEthernet7/1/1
+ description Eth28 #1 10GE to hu-bud04a-ra3 Te0/0/0/13
+ undo shutdown
+ eth-trunk 28
+ undo dcn
+#
+interface GigabitEthernet7/1/2
+ description 10GE Trunk to devadmzn9k1 Eth1/3
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet7/1/2.582
+ vlan-type dot1q 582
+ description CSDB SCB TS
+ ip binding vpn-instance csdb-oam
+ ip address 172.19.34.18 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 81 virtual-ip 172.19.34.17
+ vrrp vrid 81 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.873
+ vlan-type dot1q 873
+ description NAGRA-ONECAS
+ ip binding vpn-instance nagra-onecas
+ ip address 192.168.51.13 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 210 virtual-ip 192.168.51.12
+ vrrp vrid 210 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.874
+ vlan-type dot1q 874
+ description OSS-SYSTEM-TO-SYSTEM
+ ip binding vpn-instance ossclean
+ ip address 192.168.61.60 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 228 virtual-ip 192.168.61.62
+ vrrp vrid 228 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.875
+ vlan-type dot1q 875
+ description VTV TEST CLOUD - IT DMZ INTERCONNECT
+ ip binding vpn-instance vtvtestcloud
+ ip address 192.168.61.52 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 184 virtual-ip 192.168.61.54
+ vrrp vrid 184 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.876
+ vlan-type dot1q 876
+ description OSSCLEAN-NEM at Devai
+ ip binding vpn-instance ossclean-nem
+ ip address 192.168.61.44 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 173 virtual-ip 192.168.61.46
+ vrrp vrid 173 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.877
+ vlan-type dot1q 877
+ description VTV PROD CLOUD - IT DMZ INTERCONNECT
+ ip binding vpn-instance vtvprodcloud
+ ip address 192.168.61.28 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 135 virtual-ip 192.168.61.30
+ vrrp vrid 135 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.878
+ vlan-type dot1q 878
+ description NC INTERCONNECT
+ ip binding vpn-instance nciconn
+ ip address 192.168.61.20 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 133 virtual-ip 192.168.61.22
+ vrrp vrid 133 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.879
+ vlan-type dot1q 879
+ description AWS VPN INTERCONNECT
+ ip binding vpn-instance awsvpn
+ ip address 192.168.29.140 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 131 virtual-ip 192.168.29.142
+ vrrp vrid 131 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.898
+ vlan-type dot1q 898
+ description FORTINET-TO-OFFICENET
+ ip binding vpn-instance officenet
+ ip address 192.168.40.4 255.255.255.248
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet7/1/2.899
+ vlan-type dot1q 899
+ description FORTINET-TO-CLEANZONE
+ ip binding vpn-instance officenettranzit
+ ip address 192.168.40.12 255.255.255.248
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet7/1/2.933
+ vlan-type dot1q 933
+ description DEVACPEMANHUB
+ ip binding vpn-instance devacpemanhub
+ ip address 192.168.51.26 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 113 virtual-ip 192.168.51.25
+ vrrp vrid 113 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.939
+ vlan-type dot1q 939
+ description WEB SERVICES HUB
+ ip binding vpn-instance wshub
+ ip address 192.168.28.178 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 82 virtual-ip 192.168.28.177
+ vrrp vrid 82 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.945
+ vlan-type dot1q 945
+ description DMZ Interconnect
+ ip binding vpn-instance dmzinterconn
+ ip address 192.168.26.2 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 83 virtual-ip 192.168.26.1
+ vrrp vrid 83 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.968
+ vlan-type dot1q 968
+ description XML VPN
+ ip binding vpn-instance xml
+ ip address 192.168.27.218 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 85 virtual-ip 192.168.27.217
+ vrrp vrid 85 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.981
+ vlan-type dot1q 981
+ description NokiaSupport IT interconnect
+ ip binding vpn-instance nokiasupport
+ ip address 192.168.51.99 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 87 virtual-ip 192.168.51.101
+ vrrp vrid 87 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.984
+ vlan-type dot1q 984
+ description eudrnat devalogservers
+ ip binding vpn-instance eudrnat
+ ip address 192.168.28.130 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 88 virtual-ip 192.168.28.129
+ vrrp vrid 88 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.988
+ vlan-type dot1q 988
+ description CRP services HUB at Devai
+ ip binding vpn-instance devacrphub
+ ip address 192.168.29.58 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 89 virtual-ip 192.168.29.57
+ vrrp vrid 89 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1432
+ vlan-type dot1q 1432
+ description DEVA OKD4-A1
+ ip binding vpn-instance okd4-a1
+ ip address 192.168.91.4 255.255.255.0
+ statistic enable
+ trust upstream default
+ vrrp vrid 235 virtual-ip 192.168.91.1
+ vrrp vrid 235 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1500
+ vlan-type dot1q 1500
+ description Broadband AAA DMZ
+ ip binding vpn-instance bbaaa
+ ip address 10.40.3.2 255.255.255.240
+ statistic enable
+ trust upstream default
+ vrrp vrid 124 virtual-ip 10.40.3.1
+ vrrp vrid 124 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1501
+ vlan-type dot1q 1501
+ description Broadband AAA Interconnect to devacp
+ ip binding vpn-instance bbaaa
+ ip address 10.40.3.18 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 125 virtual-ip 10.40.3.17
+ vrrp vrid 125 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1505
+ vlan-type dot1q 1505
+ description ISBC-to-AVAYASM
+ ip binding vpn-instance officevoice
+ ip address 192.168.35.212 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 136 virtual-ip 192.168.35.214
+ vrrp vrid 136 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface GigabitEthernet7/1/2.1508
+ vlan-type dot1q 1508
+ description OSS HFS MGMT HUB to DEVACP
+ ip binding vpn-instance oss-hfs-mgmt-devahub
+ ip address 192.168.176.226 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 185 virtual-ip 192.168.176.225
+ vrrp vrid 185 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1509
+ vlan-type dot1q 1509
+ description OSS HFS PRES HUB to DEVACP
+ ip binding vpn-instance oss-hfs-pres-devahub
+ ip address 192.168.176.234 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 186 virtual-ip 192.168.176.233
+ vrrp vrid 186 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1510
+ vlan-type dot1q 1510
+ description OSS HFS MIDDLE HUB to DEVACP
+ ip binding vpn-instance oss-hfs-middle-devahub
+ ip address 192.168.176.242 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 187 virtual-ip 192.168.176.241
+ vrrp vrid 187 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1511
+ vlan-type dot1q 1511
+ description OSS HFS APP HUB to DEVACP
+ ip binding vpn-instance oss-hfs-app-devahub
+ ip address 192.168.176.250 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 188 virtual-ip 192.168.176.249
+ vrrp vrid 188 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1518
+ vlan-type dot1q 1518
+ description DEVA OLT MGMT HUB to DEVACP
+ ip binding vpn-instance olt-mgmt-devahub
+ ip address 192.168.54.66 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 204 virtual-ip 192.168.54.65
+ vrrp vrid 204 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1522
+ vlan-type dot1q 1522
+ description UPC-BMS to DEVADMZFP3/4
+ ip binding vpn-instance upc-bms
+ ip address 192.168.54.188 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 205 virtual-ip 192.168.54.190
+ vrrp vrid 205 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1526
+ vlan-type dot1q 1526
+ description DEVA OKD4-A1 to DEVACP
+ ip binding vpn-instance okd4-a1
+ ip address 192.168.51.60 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 234 virtual-ip 192.168.51.62
+ vrrp vrid 234 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.1532
+ vlan-type dot1q 1532
+ description ALIASLAB-KYC to DEVADMZFP3/4
+ ip binding vpn-instance aliaslab-kyc
+ ip address 192.168.54.252 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 207 virtual-ip 192.168.54.254
+ vrrp vrid 207 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.2101
+ vlan-type dot1q 2101
+ description NVI HW MGMT
+ ip binding vpn-instance nvimgmt
+ ip address 10.148.32.2 255.255.255.0
+ statistic enable
+ trust upstream default
+ vrrp vrid 123 virtual-ip 10.148.32.1
+ vrrp vrid 123 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+ dhcp select relay
+ ip relay address 172.17.16.147
+ ip relay address 172.21.16.190
+#
+interface GigabitEthernet7/1/2.2102
+ vlan-type dot1q 2102
+ description NSU_OAM to FORTINET CLEANZONE
+ ip binding vpn-instance nsu_oam
+ ip address 47.71.248.105 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 132 virtual-ip 47.71.248.110
+ vrrp vrid 132 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface GigabitEthernet7/1/2.2103
+ vlan-type dot1q 2103
+ description NSU_OAM to FORTINET CLEANZONE TERMINAL SERVER ACCESS
+ ip binding vpn-instance nsu_oam
+ ip address 47.71.252.105 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 134 virtual-ip 47.71.252.110
+ vrrp vrid 134 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface GigabitEthernet7/1/2.2105
+ vlan-type dot1q 2105
+ description UPCPROXY
+ ip binding vpn-instance upcproxy
+ ip address 172.22.247.130 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 222 virtual-ip 172.22.247.129
+ vrrp vrid 222 track admin-vrrp interface GigabitEthernet7/1/2.3060 vrid 244 unflowdown
+#
+interface GigabitEthernet7/1/2.3060
+ vlan-type dot1q 3060
+ description MASTER MVRRP GROUP
+ ip binding vpn-instance vrrp
+ ip address 192.168.41.1 255.255.255.248
+ vrrp vrid 244 virtual-ip 192.168.41.3
+ admin-vrrp vrid 244 ignore-if-down
+ vrrp vrid 244 priority 120
+ vrrp vrid 244 authentication-mode simple cipher %^%#O%p$2{XnYW<Te%4rYH\Ado|A5P^up8|Dy%8#/C\R%^%#
+#
+interface GigabitEthernet7/1/2.3061
+ vlan-type dot1q 3061
+ description BACKUP MVRRP GROUP
+ ip binding vpn-instance vrrp
+ ip address 192.168.41.9 255.255.255.248
+ vrrp vrid 245 virtual-ip 192.168.41.11
+ admin-vrrp vrid 245 ignore-if-down
+ vrrp vrid 245 priority 80
+ vrrp vrid 245 authentication-mode simple cipher %^%#tTa`!HOpfL=CW<L6=xjVc$:CCO\'OMrKtx8uY9FA%^%#
+ vrrp vrid 245 track bfd-session session-name mVRRP-10 increased 60
+#
+interface GigabitEthernet7/1/3
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/1/4
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/1/5
+ description devafbg1 Port22 SYNC
+ undo shutdown
+ mpls l2vc 192.168.147.43 414 tunnel-policy CPN_TE
+ undo dcn
+#
+interface GigabitEthernet7/1/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/1/7
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet7/1/8
+ description DevaiASBC 1/1/0
+ undo shutdown
+#
+interface GigabitEthernet7/1/8.162
+ vlan-type dot1q 162
+ description DevaiASBC access
+ ip binding vpn-instance vobbaccess
+ ip address 10.40.9.209 255.255.255.252
+ statistic enable
+ trust upstream default
+ port-mirroring inbound
+ port-mirroring outbound
+ port-mirroring to observe-index 7
+#
+interface GigabitEthernet7/1/9
+ description devanto1-PA15
+ undo shutdown
+ port-observing observe-index 7
+#
+interface GigabitEthernet7/1/10
+ shutdown
+#
+interface GigabitEthernet7/1/11
+ description Eth50 #1 10GE to devacsm1 Te7/4
+ undo shutdown
+ eth-trunk 50
+#
+interface GigabitEthernet8/0/0
+ description devabbn9k1 Eth1/45
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet8/0/0.202
+ vlan-type dot1q 202
+ description Nokia PROD OLT Management
+ ip binding vpn-instance nokia-olt-prod-mgmt
+ ip address 10.40.253.2 255.255.255.0
+ statistic enable
+ trust upstream default
+ vrrp vrid 203 virtual-ip 10.40.253.1
+ vrrp vrid 203 priority 120
+#
+interface GigabitEthernet8/0/1
+ description DEVA-PROD-S-202 Eth1/45
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet8/0/1.4
+ vlan-type dot1q 4
+ mtu 9216
+ description ACI ISN PtP to DEVASPINE202
+ ip binding vpn-instance aci-isn
+ ip address 192.168.44.26 255.255.255.252
+ statistic enable
+ trust upstream default
+ ospf network-type p2p
+#
+interface GigabitEthernet8/0/2
+ description Eth92 #2 10GE to devasp3n9k2 Eth2/26/4
+ undo shutdown
+ eth-trunk 92
+ undo dcn
+#
+interface GigabitEthernet8/0/3
+ description DevaiASBC FRM0 0/1/2
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet8/0/3.154
+ vlan-type dot1q 154
+ description DevaiASBC FRM0 core media
+ ip binding vpn-instance csvoice
+ ip address 10.132.41.225 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet8/0/4
+ description Eth9 #2 10GE to devancn9k2 Eth1/3
+ undo shutdown
+ eth-trunk 9
+ undo dcn
+#
+interface GigabitEthernet8/0/5
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet8/0/6
+ description 10G Trunk to DEVAHSSSW1 Te1/0/4
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet8/0/6.306
+ vlan-type dot1q 306
+ description MSC4B PROD HSS IMS2
+ ip binding vpn-instance cssig
+ ip address 172.19.36.129 255.255.255.224
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet8/0/6.2010
+ vlan-type dot1q 2010
+ description MSC4B PROD HSS DIAMETER PRI
+ ip binding vpn-instance cssig
+ ip address 172.19.40.193 255.255.255.240
+#
+interface GigabitEthernet8/0/6.2050
+ vlan-type dot1q 2050
+ description MSC4B PROD MNP SIG PRI
+ ip binding vpn-instance cssig
+ ip address 172.19.40.129 255.255.255.224
+#
+interface GigabitEthernet8/0/7
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet8/0/8
+ shutdown
+#
+interface GigabitEthernet8/0/9
+ description 10G Trunk to DEVAHSSSW1 Te1/0/5
+ undo shutdown
+ trust upstream default
+ statistic enable
+#
+interface GigabitEthernet8/0/9.304
+ vlan-type dot1q 304
+ description MSC4B PROD HSS OAM
+ ip binding vpn-instance csdb-oam
+ ip address 172.19.36.2 255.255.255.192
+ statistic enable
+ trust upstream default
+ vrrp vrid 55 virtual-ip 172.19.36.1
+ vrrp vrid 55 priority 120
+#
+interface GigabitEthernet8/0/9.305
+ vlan-type dot1q 305
+ description MSC4B PROD HSS BR
+ ip binding vpn-instance csdb-oam
+ ip address 172.19.36.66 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 56 virtual-ip 172.19.36.65
+ vrrp vrid 56 priority 120
+#
+interface GigabitEthernet8/0/9.308
+ vlan-type dot1q 308
+ description MSC4B PROD HSS APPLICATION LAN
+ ip binding vpn-instance csdb-app
+ ip address 172.19.36.98 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 59 virtual-ip 172.19.36.97
+ vrrp vrid 59 priority 120
+#
+interface GigabitEthernet8/0/9.309
+ vlan-type dot1q 309
+ description MSC4B PROD HSS HSM LAN1
+ ip binding vpn-instance csdb-hsm
+ ip address 192.168.199.130 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 60 virtual-ip 192.168.199.129
+ vrrp vrid 60 priority 120
+#
+interface GigabitEthernet8/0/9.310
+ vlan-type dot1q 310
+ description MSC4B PROD HSS HSM LAN2
+ ip binding vpn-instance csdb-hsm
+ ip address 192.168.199.162 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 61 virtual-ip 192.168.199.161
+ vrrp vrid 61 priority 80
+#
+interface GigabitEthernet8/0/9.314
+ vlan-type dot1q 314
+ description CSDB-OneNDS
+ ip binding vpn-instance csdb-onends
+ ip address 172.19.38.66 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 76 virtual-ip 172.19.38.65
+ vrrp vrid 76 priority 120
+ vrrp vrid 76 authentication-mode simple cipher %^%#$EL:PH@8MViP[JR_{fHODEItST%#<O'BVrW(Eau8%^%#
+#
+interface GigabitEthernet8/0/9.315
+ vlan-type dot1q 315
+ description CSDB-APP
+ ip binding vpn-instance csdb-app
+ ip address 172.19.38.2 255.255.255.192
+ statistic enable
+ trust upstream default
+ vrrp vrid 77 virtual-ip 172.19.38.1
+ vrrp vrid 77 priority 120
+ vrrp vrid 77 authentication-mode simple cipher %^%#-X;.1P:=LR4Ygn88|@a<nG"k-l08USDFN634bp_K%^%#
+#
+interface GigabitEthernet8/0/9.2052
+ vlan-type dot1q 2052
+ description MSC4B PROD MNP APP LAN
+ ip binding vpn-instance csdb-app
+ ip address 172.19.40.2 255.255.255.224
+ vrrp vrid 105 virtual-ip 172.19.40.1
+ vrrp vrid 105 priority 120
+#
+interface GigabitEthernet8/0/9.2060
+ vlan-type dot1q 2060
+ description MSC4B PROD MNP INTER-DS LAN
+ ip binding vpn-instance csdb-onends
+ ip address 172.19.40.34 255.255.255.224
+ vrrp vrid 106 virtual-ip 172.19.40.33
+ vrrp vrid 106 priority 120
+#
+interface GigabitEthernet8/0/10
+ shutdown
+#
+interface GigabitEthernet8/0/11
+ description 10G PtP to devan7k2-DCN Eth16/25
+ undo shutdown
+ ip binding vpn-instance dcn
+ ip address 172.19.0.6 255.255.255.254
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#+$a7U=x"e%Omdf(%ld[/xpZ]TT.6B98QD!$1y'"=%^%#
+ ospf network-type p2p
+ ospf timer hello 1
+ ospf timer dead 3
+ statistic enable
+#
+interface GigabitEthernet8/1/0
+ description 10G to devan7k2-IT Eth16/1
+ undo shutdown
+ ip binding vpn-instance itdc
+ ip address 172.21.255.8 255.255.255.254
+ trust upstream default
+ ospf authentication-mode md5 1 cipher %^%#aM\|Xto=6!07`H/oFfcXI4fE!A5T,*]c_lL"=Q_*%^%#
+ ospf cost 10
+ ospf network-type p2p
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet8/1/1
+ description 10G Trunk to DEVAHSSSW1 Te1/0/17
+ undo shutdown
+ undo dcn
+#
+interface GigabitEthernet8/1/1.311
+ vlan-type dot1q 311
+ description CSDB-OAM
+ ip binding vpn-instance csdb-oam
+ ip address 172.19.38.130 255.255.255.128
+ statistic enable
+ trust upstream default
+ vrrp vrid 80 virtual-ip 172.19.38.129
+ vrrp vrid 80 priority 120
+ vrrp vrid 80 authentication-mode simple cipher %^%#xj55$tD&62^cNS$]n@uA#wmMN!TcDA_J:uK^3ND0%^%#
+#
+interface GigabitEthernet8/1/1.2001
+ vlan-type dot1q 2001
+ description MSC4 PROD MNP OAM
+ ip binding vpn-instance csdb-oam
+ ip address 172.19.40.66 255.255.255.192
+ vrrp vrid 104 virtual-ip 172.19.40.65
+ vrrp vrid 104 priority 120
+#
+interface GigabitEthernet8/1/2
+ description XCONNECT1-devahc2-X15
+ undo shutdown
+ mpls l2vc 192.168.147.43 500
+ undo dcn
+#
+interface GigabitEthernet8/1/3
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet8/1/4
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet8/1/5
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet8/1/6
+ shutdown
+ undo dcn
+#
+interface GigabitEthernet8/1/7
+ mtu 9212
+ description devabng2 1/1/1
+ undo shutdown
+ set flow-stat interval 30
+ ip address 192.168.152.153 255.255.255.252
+ trust upstream default
+ mpls
+ undo dcn
+ statistic enable
+#
+interface GigabitEthernet8/1/8
+ description DevaiASBC 1/1/2
+ undo shutdown
+#
+interface GigabitEthernet8/1/8.166
+ vlan-type dot1q 166
+ description DevaiASBC core media
+ ip binding vpn-instance csvoice
+ ip address 10.132.41.241 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface GigabitEthernet8/1/9
+ shutdown
+#
+interface GigabitEthernet8/1/10
+ description MONITOR to devanto1 PB15
+ undo shutdown
+ port-observing observe-index 8
+#
+interface GigabitEthernet8/1/11
+ description Eth50 #2 10GE to devacsm1 Te8/4
+ undo shutdown
+ eth-trunk 50
+#
+interface 40GE6/0/0
+ description Eth91 #1 40GE to devan7k1-NFVI Eth7/6
+ undo shutdown
+ eth-trunk 91
+ undo dcn
+#
+interface 40GE6/0/1
+ shutdown
+ undo dcn
+#
+interface 40GE6/0/2
+ description Eth53 #1 40GE to DEVA-PROD-L-213 Eth1/6
+ undo shutdown
+ eth-trunk 53
+#
+interface 40GE6/1/0
+ description Eth91 #2 40GE to devan7k2-NFVI Eth7/6
+ undo shutdown
+ eth-trunk 91
+ undo dcn
+#
+interface 40GE6/1/1
+ shutdown
+ undo dcn
+#
+interface 40GE6/1/2
+ description Eth53 #2 40GE to DEVA-PROD-L-214 Eth1/6
+ undo shutdown
+ eth-trunk 53
+#
+interface 100GE4/0/0
+ description Eth31 1# to hdevap1 100GE4/0/1%{NSU;pep}%
+ undo shutdown
+ eth-trunk 31
+ undo dcn
+#
+interface 100GE4/0/1
+ description Eth2 1# to hdevape2 100GE4/0/1%{NSU;pe}%
+ undo shutdown
+ eth-trunk 2
+ undo dcn
+#
+interface 100GE4/1/0
+ description Eth5 #1 100GE to devasp3n9k1 Eth1/33
+ undo shutdown
+ eth-trunk 5
+ undo dcn
+#
+interface 100GE4/1/1
+ description Eth81 #1 100GE to DEVASECGW1-1/1/1
+ undo shutdown
+ eth-trunk 81
+ undo dcn
+#
+interface 100GE5/0/0
+ description Eth41 1# to hdevap2 100GE4/0/1%{NSU;pep}%
+ undo shutdown
+ eth-trunk 41
+ undo dcn
+#
+interface 100GE5/0/1
+ mtu 9536
+ description 09004A11-ce7/1/0
+ undo shutdown
+ undo dcn
+#
+interface 100GE5/0/1.4
+ vlan-type dot1q 4
+ mtu 9536
+ description 09004A11-4G-ACCESS-IPv4
+ control-flap
+ ip binding vpn-instance access4g
+ ip address 172.19.31.242 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface 100GE5/0/1.47
+ vlan-type dot1q 47
+ mtu 9536
+ description Huawei test MPN signaling
+ control-flap
+ ip binding vpn-instance testmpnsig
+ ip address 10.10.240.5 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface 100GE5/1/0
+ description Eth6 #1 100GE to devasp3n9k2 Eth1/33
+ undo shutdown
+ eth-trunk 6
+ undo dcn
+#
+interface 100GE5/1/1
+ description Eth82 #1 100GE to DEVASECGW2-1/1/2
+ undo shutdown
+ eth-trunk 82
+ undo dcn
+#
+interface LoopBack0
+ ip address 192.168.147.15 255.255.255.255
+#
+interface LoopBack264
+ description NVIMGMT Loopback
+ ip binding vpn-instance nvimgmt
+ ip address 10.148.34.28 255.255.255.255
+#
+interface LoopBack265
+ description NVIBACKEND Loopback
+ ip binding vpn-instance nvibackend
+ ip address 10.148.41.28 255.255.255.255
+#
+interface LoopBack324
+ description ACI-ISN Loopback
+ ip binding vpn-instance aci-isn
+ ip address 192.168.44.204 255.255.255.255
+#
+interface LoopBack500
+ ip binding vpn-instance office
+ ip address 192.168.42.197 255.255.255.255
+#
+interface LoopBack510
+ ip binding vpn-instance itdc
+ ip address 192.168.42.195 255.255.255.255
+#
+interface LoopBack511
+ ip binding vpn-instance itdc
+ ip address 192.168.42.187 255.255.255.255
+#
+interface LoopBack1002
+ ip binding vpn-instance dcn
+ ip address 192.168.150.11 255.255.255.255
+#
+interface LoopBack1005
+ ip binding vpn-instance live
+ ip address 192.168.150.73 255.255.255.255
+#
+interface LoopBack1011
+ ip binding vpn-instance gn
+ ip address 192.168.150.23 255.255.255.255
+#
+interface LoopBack1021
+ ip binding vpn-instance pcrf
+ ip address 192.168.150.103 255.255.255.255
+#
+interface Tunnel0/0/1509
+ mtu 9600
+ description MPLS_TE_TO_HPETZASBR1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.9
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1509
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1510
+ mtu 9600
+ description MPLS_TE_TO_HDEVAASBR1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.10
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1510
+#
+interface Tunnel0/0/1511
+ mtu 9600
+ description MPLS_TE_TO_HPETZPE1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.11
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1511
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1512
+ mtu 9600
+ description MPLS_TE_TO_HPETZPE2
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.12
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1512
+#
+interface Tunnel0/0/1513
+ mtu 9600
+ description MPLS_TE_TO_HPETZASBR1X8
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.13
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1513
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1514
+ mtu 9600
+ shutdown
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.14
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1514
+#
+interface Tunnel0/0/1517
+ mtu 9600
+ description MPLS_TE_TO_HDEVAASBR1X8
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.17
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ statistic enable
+ mpls te tunnel-id 1517
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1518
+ mtu 9600
+ shutdown
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.18
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1518
+#
+interface Tunnel0/0/1519
+ mtu 9600
+ description MPLS_TE_TO_HSZFVPE1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.19
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1519
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1520
+ mtu 9600
+ description MPLS_TE_TO_HSZFVPE2
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.20
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1520
+#
+interface Tunnel0/0/1521
+ mtu 9600
+ description MPLS_TE_TO_HMRTFPE1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.21
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1521
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1522
+ mtu 9600
+ description MPLS_TE_TO_HMRTFPE2
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.22
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1522
+#
+interface Tunnel0/0/1523
+ mtu 9600
+ description MPLS_TE_TO_HMCCPE1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.23
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1523
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1524
+ mtu 9600
+ description MPLS_TE_TO_HMCCPE2
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.24
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1524
+#
+interface Tunnel0/0/1525
+ mtu 9600
+ description MPLS_TE_TO_HDPLXPE1
+ shutdown
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.25
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1525
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1526
+ mtu 9600
+ description MPLS_TE_TO_HDPLXASBR1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.26
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1526
+#
+interface Tunnel0/0/1527
+ mtu 9600
+ description MPLS_TE_TO_HMISKPE1
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.27
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1527
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1528
+ mtu 9600
+ description MPLS_TE_TO_HMISKPE2
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.28
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1528
+#
+interface Tunnel0/0/1529
+ mtu 9600
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.29
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1529
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1530
+ mtu 9600
+ shutdown
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.30
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ mpls te tunnel-id 1530
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1543
+ mtu 9536
+ description MPLS_TE_TO_HDPLXPE1X8A
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.43
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ statistic enable
+ mpls te tunnel-id 1543
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+interface Tunnel0/0/1544
+ mtu 9536
+ description MPLS_TE_TO_HDPLXPE2X8A
+ ip address unnumbered interface LoopBack0
+ tunnel-protocol mpls te
+ destination 192.168.147.44
+ mpls te record-route label
+ mpls te backup hot-standby mode revertive wtr 15
+ mpls te backup hot-standby overlap-path
+ mpls te reoptimization frequency 60
+ statistic enable
+ mpls te tunnel-id 1544
+ mpls te bfd enable
+ mpls te bfd min-tx-interval 50 min-rx-interval 50
+#
+
+### BUNDLE ETHER ###
+
+#
+interface Eth-Trunk5
+ description 100GE trunk to devasp3n9k1 Po5
+ mode lacp-static
+#
+interface Eth-Trunk5.2265
+ vlan-type dot1q 2265
+ mtu 2000
+ description SP3 NVIMGMT PTP
+ ip binding vpn-instance nvimgmt
+ ip address 10.148.50.9 255.255.255.252
+ trust upstream default
+ ospf network-type p2p
+#
+interface Eth-Trunk5.2275
+ vlan-type dot1q 2275
+ mtu 2000
+ description SP3 NVIBACKEND PTP
+ ip binding vpn-instance nvibackend
+ ip address 10.148.58.9 255.255.255.252
+ trust upstream default
+ ospf network-type p2p
+#
+interface Eth-Trunk5.2770
+ vlan-type dot1q 2770
+ mtu 2000
+ description SP3 dcn P2P
+ ip binding vpn-instance dcn
+ ip address 10.150.45.1 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2771
+ vlan-type dot1q 2771
+ mtu 2000
+ description SP3 Core P2P
+ ip binding vpn-instance corehub
+ ip address 10.150.45.41 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2772
+ vlan-type dot1q 2772
+ mtu 2000
+ description SP3 Access P2P
+ ip binding vpn-instance accesshub
+ ip address 10.150.45.57 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2773
+ vlan-type dot1q 2773
+ mtu 2000
+ description SP3 Ga P2P
+ ip binding vpn-instance ga
+ ip address 10.150.45.73 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2774
+ vlan-type dot1q 2774
+ mtu 2000
+ description SP3 Sig1 P2P
+ ip binding vpn-instance cssig
+ ip address 10.150.45.21 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2775
+ vlan-type dot1q 2775
+ mtu 2000
+ description SP3 Lig P2P
+ ip binding vpn-instance lig
+ ip address 10.150.45.89 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2776
+ vlan-type dot1q 2776
+ mtu 2000
+ description SP3 CACHINGDNS P2P
+ ip binding vpn-instance cachingdns
+ ip address 10.150.45.165 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk5.2777
+ vlan-type dot1q 2777
+ mtu 2000
+ description SP3 gi P2P
+ ip binding vpn-instance gi
+ ip address 10.150.45.133 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2778
+ vlan-type dot1q 2778
+ mtu 2000
+ description SP3 sgi P2P
+ ip binding vpn-instance sgi
+ ip address 10.150.45.117 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2779
+ vlan-type dot1q 2779
+ mtu 2000
+ description SP3 EUDRNAT P2P
+ ip binding vpn-instance eudrnat
+ ip address 10.150.45.149 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk5.2810
+ vlan-type dot1q 2810
+ mtu 2000
+ description SP3 LIVE P2P
+ ip binding vpn-instance live
+ ip address 10.150.45.181 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk6
+ description 100GE trunk to devasp3n9k2 Po6
+ mode lacp-static
+#
+interface Eth-Trunk6.2165
+ vlan-type dot1q 2165
+ mtu 2000
+ description NVIMGMT PTP
+ ip binding vpn-instance nvimgmt
+ ip address 10.148.18.17 255.255.255.252
+ trust upstream default
+ ospf network-type p2p
+#
+interface Eth-Trunk6.2175
+ vlan-type dot1q 2175
+ mtu 2000
+ description SP3 NVIBACKEND PTP
+ ip binding vpn-instance nvibackend
+ ip address 10.148.26.17 255.255.255.252
+ trust upstream default
+ ospf network-type p2p
+#
+interface Eth-Trunk6.2770
+ vlan-type dot1q 2770
+ mtu 2000
+ description SP3 dcn P2P
+ ip binding vpn-instance dcn
+ ip address 10.150.45.9 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2771
+ vlan-type dot1q 2771
+ mtu 2000
+ description SP3 Core P2P
+ ip binding vpn-instance corehub
+ ip address 10.150.45.49 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2772
+ vlan-type dot1q 2772
+ mtu 2000
+ description SP3 Access P2P
+ ip binding vpn-instance accesshub
+ ip address 10.150.45.65 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2773
+ vlan-type dot1q 2773
+ mtu 2000
+ description SP3 Ga P2P
+ ip binding vpn-instance ga
+ ip address 10.150.45.81 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2774
+ vlan-type dot1q 2774
+ mtu 2000
+ description SP3 Sig1 P2P
+ ip binding vpn-instance cssig
+ ip address 10.150.45.33 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2775
+ vlan-type dot1q 2775
+ mtu 2000
+ description SP3 Lig P2P
+ ip binding vpn-instance lig
+ ip address 10.150.45.97 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2776
+ vlan-type dot1q 2776
+ mtu 2000
+ description SP3 CACHINGDNS P2P
+ ip binding vpn-instance cachingdns
+ ip address 10.150.45.173 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk6.2777
+ vlan-type dot1q 2777
+ mtu 2000
+ description SP3 gi P2P
+ ip binding vpn-instance gi
+ ip address 10.150.45.141 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2778
+ vlan-type dot1q 2778
+ mtu 2000
+ description SP3 sgi P2P
+ ip binding vpn-instance sgi
+ ip address 10.150.45.125 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2779
+ vlan-type dot1q 2779
+ mtu 2000
+ description SP3 EUDRNAT P2P
+ ip binding vpn-instance eudrnat
+ ip address 10.150.45.157 255.255.255.252
+ trust upstream default
+#
+interface Eth-Trunk6.2850
+ vlan-type dot1q 2850
+ mtu 2000
+ description SP3 LIVE P2P
+ ip binding vpn-instance live
+ ip address 10.150.45.189 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk9
+ description 20GE trunk to NC DR
+ mode lacp-static
+ statistic enable
+#
+interface Eth-Trunk9.1613
+ vlan-type dot1q 1613
+ description NetCracker DR Interconnect 1
+ ip binding vpn-instance nciconn
+ ip address 192.168.246.148 255.255.255.248
+#
+interface Eth-Trunk9.1614
+ vlan-type dot1q 1614
+ description NetCracker DR Interconnect 2
+ ip binding vpn-instance nciconn
+ ip address 192.168.246.156 255.255.255.248
+#
+interface Eth-Trunk28
+ description 10GE Trunk to Klapka
+ mode lacp-static
+#
+interface Eth-Trunk28.201
+ vlan-type dot1q 201
+ description UPC CMTS Management
+ ip binding vpn-instance upccmtsman
+ ipv6 enable
+ ip address 195.184.166.177 255.255.255.252
+ ipv6 address 2A02:AB80:0:A::C3B8:A6B1/126
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk28.203
+ vlan-type dot1q 203
+ description UPC BMS
+ ip binding vpn-instance upc-bms
+ ip address 192.168.54.173 255.255.255.254
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk28.204
+ vlan-type dot1q 204
+ description UPC ISP TEST
+ ip binding vpn-instance upc-isptestnet
+ ipv6 enable
+ ip address 89.133.4.250 255.255.255.254
+ ipv6 address 2A02:AB80:0:A::5985:4FA/127
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk28.205
+ vlan-type dot1q 205
+ description bbaaaa interconnect
+ ip binding vpn-instance bbaaa
+ ip address 10.40.3.33 255.255.255.252
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk28.207
+ vlan-type dot1q 207
+ description Ceragon Interconnect
+ ip binding vpn-instance ceragon
+ ip address 192.168.54.44 255.255.255.254
+ statistic enable
+ trust upstream default
+#
+interface Eth-Trunk31
+ mtu 9536
+ description To_devap1_ETH-31
+ control-flap
+ ip address 192.168.154.126 255.255.255.252
+ trust upstream default
+ undo ip option source-route enable
+ ospf cost 10
+ ospf network-type p2p
+ ospf ldp-sync
+ mode lacp-static
+ mpls
+ mpls te
+ mpls rsvp-te
+ mpls ldp
+ port-queue ef pq shaping shaping-percentage 50 outbound
+#
+interface Eth-Trunk41
+ mtu 9536
+ description To_devap2_ETH-41
+ control-flap
+ ip address 192.168.154.174 255.255.255.252
+ trust upstream default
+ undo ip option source-route enable
+ ospf cost 15
+ ospf network-type p2p
+ ospf ldp-sync
+ mode lacp-static
+ mpls
+ mpls te
+ mpls rsvp-te
+ mpls ldp
+ port-queue ef pq shaping shaping-percentage 50 outbound
+#
+interface Eth-Trunk50
+ description 20G Trunk to devacsm1 Po50
+ mode lacp-static
+#
+interface Eth-Trunk50.25
+ vlan-type dot1q 25
+ description Huawei RNC41 IU Subrack 0
+ ip binding vpn-instance iu
+ ip address 10.132.10.26 255.255.255.248
+ statistic enable
+ trust upstream default
+ arp expire-time 300
+ vrrp vrid 1 virtual-ip 10.132.10.25
+ vrrp vrid 1 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.26
+ vlan-type dot1q 26
+ description Huawei RNC41 IU Subrack 1
+ ip binding vpn-instance iu
+ ip address 10.132.10.34 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 2 virtual-ip 10.132.10.33
+ vrrp vrid 2 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.27
+ vlan-type dot1q 27
+ description Huawei RNC41 IU Subrack 2
+ ip binding vpn-instance iu
+ ip address 10.132.10.42 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 3 virtual-ip 10.132.10.41
+ vrrp vrid 3 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.124
+ vlan-type dot1q 124
+ description OSS-SYSTEM-TO-SYSTEM
+ ip binding vpn-instance ossclean
+ ip address 10.106.155.34 255.255.255.224
+ statistic enable
+ trust upstream default
+ vrrp vrid 99 virtual-ip 10.106.155.33
+ vrrp vrid 99 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.132
+ vlan-type dot1q 132
+ description Huawei RNC41 IU-CS Subrack 0
+ ip binding vpn-instance iucs
+ ip address 10.132.15.130 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 6 virtual-ip 10.132.15.129
+ vrrp vrid 6 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.133
+ vlan-type dot1q 133
+ description Huawei RNC41 IU-CS Subrack 1
+ ip binding vpn-instance iucs
+ ip address 10.132.15.138 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 7 virtual-ip 10.132.15.137
+ vrrp vrid 7 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.134
+ vlan-type dot1q 134
+ description Huawei RNC41 IU-CS Subrack 2
+ ip binding vpn-instance iucs
+ ip address 10.132.15.146 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 8 virtual-ip 10.132.15.145
+ vrrp vrid 8 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.215
+ vlan-type dot1q 215
+ description Huawei BSC 403 Subrack0 AoverIP
+ ip binding vpn-instance iucs
+ ip address 10.132.15.186 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 215 virtual-ip 10.132.15.185
+ vrrp vrid 215 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.216
+ vlan-type dot1q 216
+ description Huawei BSC 403 Subrack0 GboverIP
+ ip binding vpn-instance gb
+ ip address 10.132.10.138 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 216 virtual-ip 10.132.10.137
+ vrrp vrid 216 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.217
+ vlan-type dot1q 217
+ description Huawei BSC 403 Subrack1 AoverIP
+ ip binding vpn-instance iucs
+ ip address 10.132.15.194 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 217 virtual-ip 10.132.15.193
+ vrrp vrid 217 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.218
+ vlan-type dot1q 218
+ description Huawei BSC 403 Subrack1 GboverIP
+ ip binding vpn-instance gb
+ ip address 10.132.10.154 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 218 virtual-ip 10.132.10.153
+ vrrp vrid 218 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.221
+ vlan-type dot1q 221
+ description Huawei BSC 401 Subrack0 AoverIP
+ ip binding vpn-instance iucs
+ ip address 10.132.15.66 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 9 virtual-ip 10.132.15.65
+ vrrp vrid 9 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.222
+ vlan-type dot1q 222
+ description Huawei BSC 401 Subrack0 GboverIP
+ ip binding vpn-instance gb
+ ip address 10.132.10.130 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 10 virtual-ip 10.132.10.129
+ vrrp vrid 10 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
+interface Eth-Trunk50.223
+ vlan-type dot1q 223
+ description Huawei BSC 401 Subrack1 AoverIP
+ ip binding vpn-instance iucs
+ ip address 10.132.15.90 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 11 virtual-ip 10.132.15.89
+ vrrp vrid 11 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.224
+ vlan-type dot1q 224
+ description Huawei BSC 401 Subrack1 GboverIP
+ ip binding vpn-instance gb
+ ip address 10.132.10.162 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 12 virtual-ip 10.132.10.161
+ vrrp vrid 12 track admin-vrrp interface Eth-Trunk50.4061 vrid 255 unflowdown
+#
+interface Eth-Trunk50.238
+ vlan-type dot1q 238
+ description CSDB-OAM to DCNFW
+ ip binding vpn-instance csdb-oam
+ ip address 172.19.34.12 255.255.255.248
+ statistic enable
+ trust upstream default
+ vrrp vrid 13 virtual-ip 172.19.34.14
+ vrrp vrid 13 track admin-vrrp interface Eth-Trunk50.4060 vrid 254 unflowdown
+#
